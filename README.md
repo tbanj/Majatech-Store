@@ -1,4 +1,9 @@
-# NextekkMomPopWebUI
+# Majatech-Store
+
+
+url is https://mompop-9c94f.firebaseapp.com/
+
+portfoio url is http://maja.byethost13.com/mo/files.html?i=1
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
 
