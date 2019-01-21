@@ -1,0 +1,58 @@
+<div id="{{urlCheck}}" class="container">
+    
+    
+    
+    <!-- search bar -->
+    <div class="form-group">
+      
+    </div>
+    <h1 class="display-4">New Arrivals</h1>
+    
+    <!--Product cards  -->
+    <div class="row">
+      <div class="col-sm-12 col-md-4 col-lg-3" *ngFor="let product of products" 
+      style="margin-bottom:20px">
+        <div class="card">
+          <div class="card-header">
+            <div class="row">
+              <div class="col-md-8">
+                  <h5 class="card-title">{{ product.name }}</h5>
+              </div>
+              <!-- style="margin-left: 40px" -->
+              <div class="col-md-4 pull-left" > <p>
+                  <Strong >Stock
+                   {{ product.stock }}
+                  </Strong>
+                </p></div>
+            </div>
+            
+           
+          </div>
+          <div class="card-body">
+          
+          
+            <img class="card-img-bottom" [src]="product.imagePath"
+            alt="{{ product.name }}">
+            
+            <p class="card-text">
+              {{product.description}}
+            </p>
+            <div class="row">
+              <div class=" col-md-12 col-sm-12" style="text-align: center"><h6 
+                class="card-text" style="text-align: center"
+                >{{product.price | currency: currdecideLog}}</h6></div>
+                
+            </div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12" style="margin-top: 3%;text-align: center "><button type="button"
+                class="btn btn-outline-primary ab card-text" style="text-align: center"
+                 (click)="addToCart(product)">BUY NOW</button></div>
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
+    
+    
+
+</div>

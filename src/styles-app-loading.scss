@@ -1,0 +1,18 @@
+.app-loading {
+    .circularLogo {
+        width: 100px;
+        height: 100px;
+        /*  // this way asset gets processed by webpack  */
+       
+        background: url(./circular.svg) center center no-repeat; 
+      }
+  }
+
+  
+
+
+
+// background-image: url('../../assets/home-page-img/header-bg.jpg') center center no-repeat;
+
+//   for very small logo convert it to base64
+// <img src="data:image/png;base64,...the actual data..." alt="My App Logo">.

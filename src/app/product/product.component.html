@@ -1,0 +1,147 @@
+<div class="container"  id="{{urlCheck}}">
+    <h1 class="display-4">Products</h1>
+
+    
+    <div class="row">
+    
+        <!-- New Product Form -->
+            <div class="card" style="width: 340px; margin-right: 15px;margin-bottom: 20px" >
+                <form name="newPro" 
+                class="form" (ngSubmit)="addProduct(form)" #form="ngForm">
+                    <div class="row" >
+                        <div class="col-12 form-group">
+                            <input type="text" #nameI="ngModel" name="name" 
+                            class="form-control"  [(ngModel)]="newProduct.name" placeholder="Product Name"
+                             required minlength="3"/>
+        
+                        </div>
+                       
+
+                    </div>
+    
+                    <div class="row">
+                        <div class="col form-group">
+                            <input type="number" #priceI="ngModel" name="price" 
+                            class="form-control" [(ngModel)]="newProduct.price" placeholder="Price" required />
+                        </div>
+                
+                        <div class="col form-group">
+                            <input type="number" #stockI="ngModel" name="stock" class="form-control"
+                            [(ngModel)]="newProduct.stock" placeholder="Count" required />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col form-group">
+                                <input type="text" #imageI="ngModel" name="imagePath"
+                                 class="form-control" [(ngModel)]="newProduct.imagePath" 
+                                 placeholder="Image Url" required />
+                            </div>
+                </div>
+                    <div class="row">
+                        <div class="col form-group">
+                            <textarea  name="description" 
+                            [(ngModel)]="newProduct.description" rows="4"
+                             class="form-control" placeholder="Description" required></textarea>
+                        </div>
+                    </div>
+                   
+                    <!--   -->
+                        <div class=" form-group wrappercenter card-text" style="margin-top: -5px">
+                            <button type="submit" class="btn btn-primary btn-lg" 
+                                          
+             [disabled]="!form.valid"
+             >Save</button>
+                        </div>
+                    
+                </form>
+            </div>
+        <!--  -->
+    
+            <!-- Card use to populate product list -->
+      <div
+      *ngFor="let product of products" style="margin-bottom:20px; margin-right: 15px">
+            <div *ngIf="!productNotEdited(product.id)"> 
+                    <div class="card" style="width: 340px">
+                        <div class="card-header">
+                            <h4 class="card-title">{{product.name}} 
+                                <i class="float-right fa fa-trash" (click)="deleteProduct(product.id)" 
+                                ></i>&nbsp;
+                                <i class="float-right fa fa-pencil" (click)="stateEdited =product.id "
+                                
+                                ></i>
+                            </h4>
+                            <!--  -->
+                          </div>
+                          <div class="card-body">
+                              <!-- image to display each laptop -->
+                                <img class="card-img-bottom" [src]="product.imagePath"
+                                alt="{{ product.name }}">
+    
+                            <div class="row">
+                                    <div class="col-md-8">
+                                            <h3 class="card-text">{{product.price | currency: '₦'}}</h3>
+                                    </div>
+                                    <div class="col-md-4 pull-right">
+                                              <Strong>Stock {{product.stock}}
+                                              </Strong>
+                                              
+                                    </div>
+                                    
+                            </div>
+                            <p class="card-text">
+                              {{product.description}}
+                            </p>
+                          </div>
+                    </div>
+              </div>
+              <ng-template #productEdit>
+    
+                <!-- Product edit card  -->
+              </ng-template>
+              <div  *ngIf="productNotEdited(product.id)" >
+                    <div class="card" style="width: 340px" >
+                        <form name="editPro" class="form" #formB="ngForm">
+                            <div class="row">
+                                <div class="col-8 form-group">
+                                    <input type="text" #editedProName name="name" class="form-control" [(ngModel)]="product.name" placeholder="Product Name" required />
+                                </div>
+                                <div class="col-4 form-group">
+                                    <input type="text" #editedProId name="id" [attr.disabled]="true" class="form-control" [(ngModel)]="product.id" placeholder="Id" required />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                    <input type="number" #editedProPrice name="price" class="form-control" [(ngModel)]="product.price" placeholder="Price" required />
+                                </div>
+                                <div class="col form-group">
+                                    <input type="number" #editedProCount name="stock" class="form-control" [(ngModel)]="product.stock" placeholder="Count" required />
+                                </div>
+                               
+    
+                            </div>
+                            <div class="row">
+                                    <div class="col form-group">
+                                            <input type="text" #editedProImage name="image" class="form-control" [(ngModel)]="product.imagePath" placeholder="Image Url" required />
+                                        </div>
+                            </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                    <textarea #editedProDescription name="description" [(ngModel)]="product.description" 
+                                    rows="4" class="form-control" placeholder="Description" required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group wrappercenter">
+                                <input type="button" 
+                                class="btn btn-primary btn-lg" value="Update"
+                                 (click)="updateProduct(product)"
+                                 [disabled]="!formB.valid" />
+                            </div>
+                        </form>
+                    </div>
+    
+              </div>
+    
+      </div>
+    </div>
+
+</div>

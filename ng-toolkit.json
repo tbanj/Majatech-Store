@@ -1,0 +1,17 @@
+{
+  "universal": {
+    "skipInstall": false,
+    "directory": ".",
+    "project": "Majatech"
+  },
+  "serverless": {
+    "directory": ".",
+    "skipInstall": true,
+    "provider": "firebase",
+    "project": "Majatech",
+    "serverless": {
+      "aws": {},
+      "gcloud": {}
+    }
+  }
+}

@@ -1,0 +1,87 @@
+
+<section id="{{idCheck}}" class="section-bg wow fadeInUp">
+  <div class="container">
+
+    <div class="section-header">
+      <h3>CONTACT US</h3>
+      <p>How can we be of help</p>
+    </div>
+
+    <div class="row contact-info">
+
+      <div class="col-md-4">
+        <div class="contact-address">
+          <i class="ion-ios-location-outline"></i>
+          <h3>Address</h3>
+          <address>14 Tokosi Street, Orile Iganmu, 
+            Surulere, Lagos
+            Nigeria </address>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="contact-phone">
+          <i class="ion-ios-telephone-outline"></i>
+          <h3>Phone Number</h3>
+          <p><a href="tel:+2348074551280">+234 807 455 1280</a></p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="contact-email">
+          <i class="ion-ios-email-outline"></i>
+          <h3>Email</h3>
+          <p><a href="mailto:alabiwahab@yahoo.com">alabiwahab@yahoo.com</a></p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="form">
+      <div id="errormessage"></div>
+      <form (ngSubmit)="contactSubmit(contactForm)" #contactForm="ngForm">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <input type="text" name="name" class="form-control" id="name"
+            minlength="3"
+      maxlength="25" placeholder="Your Name"
+             ngModel required #name= "ngModel"/>
+             <p class="centText">
+              <span class="textError" *ngIf="!name.valid && name.touched"><span class="textErrorX">*</span>Input characters allowed is 3 characters!</span>
+             </p> 
+             
+          </div>
+          <div class="form-group col-md-6">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" 
+             ngModel required #email = "ngModel"/>
+             <p class="centText"><span class="textError" *ngIf="!email.valid && email.touched"><span class="textErrorX">*</span>Please enter a valid email!</span>
+             </p>
+             
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="subject" id="subject"
+           placeholder="Subject" 
+           minlength="7"
+          
+            ngModel required #subject = "ngModel"/>
+            <p class="centText"><span class="textError" *ngIf="!subject.valid && subject.touched"><span class="textErrorX">*</span>Please enter at least 8 characters</span>
+            </p>
+            </div>
+        <div class="form-group">
+          <textarea class="form-control" name="message" rows="5" data-rule="required" ngModel placeholder="Message"
+          minlength="10"
+      
+           #message ="ngModel" required></textarea>
+           <p class="centText">
+            <span class="textError"  *ngIf="!message.valid && message.touched"><span class="textErrorX">*</span>Please write something for us</span>
+        
+           </p>
+           </div>
+        <div class="text-center"><button  [disabled]="!contactForm.valid" type="submit">Send Message</button></div>
+        
+      </form>
+    </div>
+
+  </div>
+</section>

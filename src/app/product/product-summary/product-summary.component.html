@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2 col-sm-10 offset-sm-1 col-lg-6 offset-lg-3 " 
+        style="border: 1px solid #333; margin-top: 5%;margin-bottom: 5%;">
+      
+        <div class="paymentCont">
+            <div class="headingWrap">
+                <h3 class="headingTop text-center">Select Your Payment Method</h3>	
+                <p class="text-center">Created with bootsrap button and using radio button</p>
+            </div>
+            <div class="paymentWrap">
+              <div class="btn-group paymentBtnGroup btn-group-justified " data-toggle="buttons">
+                      <div  class= "col-sm-10 col-md-10 offset-md-1">
+                          <label class="btn paymentMethod active">
+                              <div class="method visa"></div>
+                                <input type="radio" name="options" checked> 
+                            </label>
+                            <label class="btn paymentMethod">
+                              <div class="method master-card"></div>
+                                <input type="radio" name="options"> 
+                            </label>
+                            <label class="btn paymentMethod ">
+                              <div class="method amex"></div>
+                                <input type="radio" name="options">
+                            </label>
+                             <label class="btn paymentMethod ">
+                               <div class="method vishwa"></div>
+                                <input type="radio" name="options"> 
+                            </label>
+                            <label class="btn paymentMethod ">
+                              <div class="method ez-cash"></div>
+                                <input type="radio" name="options"> 
+                            </label>
+                      </div>
+                   
+                  </div>        
+            </div>
+            <div class="row">
+                <div class=" clearfix col-md-12 col-sm-10 " style="margin-bottom: 3%">
+                    <div class="btn btn-success pull-left" (click)="continueShopping()"><span class="glyphicon glyphicon-chevron-left"></span> CONTINUE SHOPPING</div>
+                    <div class="btn btn-success pull-right " (click)="handlePayment()">
+                        Add Credits to your Account
+                      <span class="glyphicon glyphicon-chevron-right"></span></div>
+                  </div>
+            </div>
+          </div>
+      </div>
+  
+      
+    </div>
+  </div>
+  

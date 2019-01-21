@@ -1,0 +1,63 @@
+{ "data" : 
+    [
+        {
+          "id": 7146,
+          "name": "Macbook Pro 612",
+          "description": "State of the heart notebook with finger print functionality.\n4GB of RAM\n512GB OF SDD storage\n15.7 inches screen",
+          "stock": 45,
+          "price": 600000,
+          "imagePath": "https://res.cloudinary.com/dr9bbyvab/image/upload/v1537188835/mom-pop/laptops/toshiba3.jpg"
+        },
+        {
+          "id": 7151,
+          "name": "Lenovo Thinkpad",
+          "description": "State of the heart notebook with finger print functionality. 2GB of RAM 512GB OF SDD storage 15.7 inches screen",
+          "stock": 98,
+          "price": 350000,
+          "imagePath": "https://res.cloudinary.com/dr9bbyvab/image/upload/v1537188828/mom-pop/laptops/lenovo-ip-320-laptop-original-imaf49pfduqmxqsf.jpg"
+             },
+        {
+          "id": 7153,
+          "name": "Lenovo Thinkpad Lite",
+          "description": "State of the heart notebook with finger print functionality. 8GB of RAM 512GB OF SDD storage 15.7 inches screen",
+          "stock": 199,
+          "price": 550000,
+          "imagePath": "https://res.cloudinary.com/dr9bbyvab/image/upload/v1537188835/mom-pop/laptops/toshiba.jpg"
+
+        },
+        {
+          "id": 7164,
+          "name": "Samsung Lite",
+          "description": "State of the heart notebook with finger print functionality. 8GB of RAM 1TB OF HDD storage 15.7 inches screen",
+          "stock": 200,
+          "price": 250000,
+          "imagePath": "https://res.cloudinary.com/dr9bbyvab/image/upload/v1537188835/mom-pop/laptops/toshiba2.jpg"
+
+        },
+        {
+          "id": 7165,
+          "name": "Toshiba Air",
+          "description": "State of the heart notebook with finger print functionality. 4GB of RAM 512GB OF SDD storage 15.7 inches screen",
+          "stock": 50,
+          "price": 430000,
+          "imagePath": "https://res.cloudinary.com/dr9bbyvab/image/upload/v1537188826/mom-pop/laptops/hp-na-laptop-original.jpg"
+        },
+        {
+          "id": 7167,
+          "name": "Dell Latitude",
+          "description": "Affordable with super fast  RAM",
+          "stock": 100,
+          "price": 600000,
+          "imagePath": "https://res.cloudinary.com/dr9bbyvab/image/upload/v1537188826/mom-pop/laptops/339392-apple-macbook-pro-15-inch-2013.jpg"
+        
+        },
+        {
+          "id": 8171,
+          "name": "Hp Probook  A",
+          "description": "State of the heart notebook with finger print functionality. Core i5, 6GB of RAM, 512GB OF SDD storage and 15.7 inches screen",
+          "stock": 67,
+          "price": 620000,
+          "imagePath": "https://res.cloudinary.com/dr9bbyvab/image/upload/v1537188827/mom-pop/laptops/hp2.png"
+        
+        }
+      ]}

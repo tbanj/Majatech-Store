@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+.circularLogon {
+    width: 100px;
+    height: 100px;
+    /*  // this way asset gets processed by webpack  */
+   
+    background-color: url(./circular.svg) center center no-repeat; 
+  }
+
+  .textError {
+    font-size: 13px !important;
+  }
+
+  .textErrorX {
+    color: red !important;
+  }
+  .centText{
+    text-align: center;
+  }

@@ -1,0 +1,216 @@
+<div class="container">    
+    <div id="{{loginCheck}}" *ngIf="loginCheck" >
+          
+          <div class="col-md-8 offset-md-2 col-sm-10 offset-sm-1 col-lg-6 offset-lg-3 " style="border: 1px solid #333; margin-top: 5%;margin-bottom: 5%;">
+              
+                      <!-- use to display error encounter during signin -->
+                  <div *ngIf='signinForm.errors ' style="margin-top:3%;" class="alert alert-danger" role="alert">
+                          <strong>{{ nameUserText }}</strong> 
+                        </div>
+  
+              <div class="row header colorSign"><div class="col colorSign" style="height: 45px;font-weight: 700;">Sign In</div>
+              <div class="col colorSign" style="text-align: end;font-weight: 700;"><a class="colorSign" [routerLink]="['/s/forgetpassword']" routerLinkActive="router-link-active" (click)="forgetLoginCheck()">Forgot password?</a></div></div>                    
+           
+                       <!-- signin form -->
+                      <form id="loginform"  [formGroup]="signinForm"  (ngSubmit)="onSignIn()"
+                              role="form" style="margin-top: 20px;">
+                                          <div class="input-group mb-3">
+                                                  <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                                                  </div>
+                                                  <input type="email" class="form-control" placeholder="Email" aria-label="Email"
+                                                   aria-describedby="basic-addon1" 
+                                                   formControlName="email" >
+                                                   <!-- <span class="help-block"
+                                                       *ngIf="!signinForm.get('email').valid">
+                                                      Please input a valid email address
+                                                      </span> -->
+                                                </div>
+                                                
+                                                <div class="input-group mb-3">
+                                                      <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-lock"></i></span>
+                                                      </div>
+                                                      <input id="login-password" type="password" class="form-control" name="password" 
+                                                      placeholder="password" aria-label="password" 
+                                                      aria-describedby="basic-addon1" formControlName="password" required>
+                                                      
+                                                    </div>
+                                      
+                                 
+                                          
+            
+                                      
+                                  <div class="input-group">
+                                            <div class="checkbox">
+                                              <label>
+                                                <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
+                                              </label>
+                                            </div>
+                                          </div>
+            
+            
+                                      <div style="margin-top:2.5%" class="form-group">
+                                          <!-- Button -->
+            
+                                          <div class="col-sm-12 controls" style="text-align: center">
+                                            <button type="submit"
+                                            [disabled]="!signinForm.valid" style="margin-right: 10px;"  class="btn btn-success">Login  </button>
+                                            
+                                            <!-- <button (click)="socialSignIn('facebook')">Sign in with Facebook</button>
+                                            <button (click)="socialSignIn('google')">Signin in with Google</button>     -->
+                                            <!-- <a href="https://facebook.com/aolabanji"  class="facebook"><i class="fa fa-facebook"></i></a> -->
+                                          </div>
+                                      </div>
+            
+                                     <!-- alert if error encounter during signup or login -->
+                                      <!-- <div *ngIf="nameUser" class="alert alert-danger alert-dismissible">
+                                            <a href="#" data-dismiss="alert" aria-label="close">&times;</a>
+                                          <strong>{{ nameUserText }}</strong> 
+                                      </div> -->
+  
+                                      
+  
+                                      <div class="form-group">
+                                          <div class="col-md-12 control">
+                                                  <div  style="text-align: center;border-top: 1px solid#888; padding-top:15px; font-size:85%" >
+                                                  <span>Don't have an account!  </span>
+                                              <a class=" btn btn-primary" type="button"
+                                              [routerLink]="['/s/signup']" routerLinkActive="router-link-active"
+                                              (click)="signupCheck()">Sign Up Here
+                                          </a>
+                                              </div>
+                                          </div>
+                                      </div>    
+                                  </form>     
+            
+              </div>
+          
+    </div>
+    
+    <!-- <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2" style="border: 1px solid #333;"></div> -->
+    <div id="{{signUpCheckMM}}" *ngIf="signUpCheckM">   
+        
+          
+    <div  style="margin-top:7%;border: 1px solid #333; margin-bottom: 5%;" class="mainbox col-md-6 offset-md-3 col-sm-8 offset-sm-2">                    
+      
+              <!-- Use to display error message during registration -->
+      <div *ngIf='signupForm.errors' style="margin-top:3%;" class="alert alert-danger" role="alert">
+                  <strong>{{ commentsignupcheck }}</strong> 
+                </div>
+                
+      <div class="row header"><div class="col colorSign" style="height: 45px;font-weight: 700;">Sign Up </div>
+          <div class="col" style="text-align: end;">
+                  <a class="colorSign" style="font-weight: 700;" [routerLink]="['/s/signin']" routerLinkActive="router-link-active"  (click)="signinCheck()">Sign In</a>
+              </div></div>    
+              
+            <div class="panel-body" >
+  
+                           <!-- signUp Form -->
+                <form id="signupform" [formGroup]="signupForm" (ngSubmit)="onSignUp()"
+                class="form-horizontal" role="form">
+                    
+                    <div  style="display:none" class="alert alert-danger">
+                        <p>Error:</p>
+                    </div>
+                                                 
+                      
+                    <div class="form-group">
+                        <div class="row" style="margin-top: 4%;">
+                              <label style="margin-top: 1.5%;" for="email" class="col-md-3 control-label">Email</label>
+                              <div class="col-md-9">
+                                  <input type="email" class="form-control" name="email" placeholder="Email Address"
+                                  formControlName="emailNew">
+                                  <span class="help-block errorHelpStyle"
+                                                       *ngIf="!signupForm.get('emailNew').valid">
+                                                      <span class="errorHelp">*</span> please input a valid email address
+                                                      </span>
+                              </div>
+                        </div>
+                    </div>
+                        
+                    <div class="form-group">
+                          <div class="row" style="margin-top: 4%;">
+                                  <label style="margin-top: 1.5%;" for="firstname" class="col-md-3 control-label">First Name</label>
+                                  <div class="col-md-9">
+                                      <input type="text" class="form-control" name="firstname" 
+                                      placeholder="First Name" formControlName="firstNameNew">
+                                      
+                                  </div></div>
+                        
+                    </div>
+                    <div class="form-group">
+                          <div class="row" style="margin-top: 4%;">
+                              <label style="margin-top: 1.5%;" for="lastname" class="col-md-3 control-label">Last Name</label>
+                              <div class="col-md-9">
+                                  <input type="text" class="form-control" name="lastname" 
+                                  placeholder="Last Name" formControlName="lastNameNew">
+                                  
+                              </div></div>
+                       
+                    </div>
+                    <div class="form-group">
+                          <div class="row" style="margin-top: 4%;">
+                              <label style="margin-top: 1.5%;" for="password" class="col-md-3 control-label">Password</label>
+                              <div class="col-md-9">
+                                  <input type="password" class="form-control" name="passwd" placeholder="Password"
+                                  formControlName="passwordNew">
+                                  <span class="help-block errorHelpStyle"
+                                                       *ngIf="!signupForm.get('passwordNew').valid">
+                                                      <span class="errorHelp">*</span> at least eight characters mix with one uppercase letter,
+                                                       one lowercase letter and one number:
+                                                      </span>
+                              </div></div> 
+                        
+                    </div>
+                        
+                    <div class="form-group">
+                          <div class="row" style="margin-top: 4%;">
+                                  <label style="margin-top: 1.5%;" for="icode" class="col-md-3 control-label">Invitation Code</label>
+                                  <div class="col-md-9">
+                                      <input type="text" class="form-control" name="icode" placeholder="Invitation Code"
+                                      formControlName="invitationCodeNew">
+                                  </div></div>
+                        
+                    </div>
+  
+                    <div class="form-group">
+                        <!-- Button -->                                        
+                        <div class="offset-md-3 col-md-9">
+                            <button  type="button" type="submit" [disabled]="!signupForm.valid" class="btn btn-info"><i class="icon-hand-right"></i> Sign Up</button>
+                           
+                        </div>
+                    </div>
+                    
+                    <!-- <div style="border-top: 1px solid #999; padding-top:20px"  class="form-group">
+                        
+                        <div class="offset-md-3 col-md-9">
+                            <button id="btn-fbsignup" type="button" class="btn btn-primary">   Sign Up with Facebook</button>
+                        </div>                                           
+                            
+                    </div> -->
+                    
+                    
+                    
+                </form>
+  
+                
+  
+             </div>
+  </div>
+  </div>
+  
+  <div id="{{loginCheck}}" *ngIf="forgetLogCheck">
+      <div class="col-md-9 offset-md-1  col-sm-12" style="border: 1px solid #333; margin-bottom: 6%;margin-top: 6%;">
+         <div class=" col-md-12 input-group mb-3" style=" margin-top: 3%">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-at"></i></span>
+                  </div>
+                  <input type="email" class="form-control" placeholder="Input email you registered with" aria-label="Email" aria-describedby="basic-addon1">
+                  <button style="background-color: #ee419e;color: #fff;" class="btn btn-succes input-group-append" (click)="resetPassword()">Reset Password</button>  
+              </div>
+      </div>
+  </div>
+  
+     <!--  -->
+  </div>
