@@ -5,6 +5,29 @@ url is https://mompop-9c94f.firebaseapp.com/
 
 portfoio url is http://maja.byethost13.com/mo/files.html?i=1
 
+
+
+
+
+Database is implemented with firebase.
+
+Payment module is integrated with Stripe.
+
+Live demonstrtion of the application is hosted at
+
+
+# Screenshots
+
+![Home Page](https://user-images.githubusercontent.com/20041050/209094986-6eab9528-5d6d-47da-a00d-7277da5afecb.png)
+
+![Login Page](https://user-images.githubusercontent.com/20041050/209094902-d3dc814c-d8bb-4025-8903-7d5904457899.png)
+
+![Cart Page](https://user-images.githubusercontent.com/20041050/209095530-a7fdcd72-4814-4752-b1f2-673b04b27ebb.png)
+![Payment Page](https://user-images.githubusercontent.com/20041050/209095648-8e92af89-1828-4d9b-8945-64e254f156ac.png)
+
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
 
 ## Development server
@@ -30,3 +53,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+# Author : Alabi Temitope [<img src="src/assets/readme-data/linkedin-icon.png">](https://www.linkedin.com/in/alabi-temitope-aa036b103/)
+
