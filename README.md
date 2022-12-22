@@ -3,12 +3,6 @@
 
 url is https://mompop-9c94f.firebaseapp.com/
 
-portfoio url is http://maja.byethost13.com/mo/files.html?i=1
-
-
-
-
-
 Database is implemented with firebase.
 
 Payment module is integrated with Stripe.
